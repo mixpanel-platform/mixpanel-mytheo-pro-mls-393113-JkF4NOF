@@ -11,7 +11,17 @@
     </div>
     <div id="table"></div>
     <script>
-      
+      var params = {
+        type: 'unique',     // analysis type for the data, can be 'general', 'unique', or 'average'
+        unit: 'day',        // level of granularity of the data, can be 'minute', 'hour', 'day', 'week', 'month'
+        interval: 2         // number of "units" back to include
+      };
+
+      MP.api.ready(function() {
+          MP.api.events('create_account', params).done(function(results) {
+              console.log('got results\n', results.values());
+          });
+      });
     </script>
   </body>
 </html>
