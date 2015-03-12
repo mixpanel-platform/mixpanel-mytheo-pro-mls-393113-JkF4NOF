@@ -27,6 +27,11 @@ $(document).ready(function() {
     var table = $('<div></div>').appendTo('body').MPTable({chartType: 'line'});     // Create a line chart
     table.MPTable('setData', data);                                                 // Set the chart's data
 });
+
+$(document).ready(function() {
+    var chart = $('<div></div>').appendTo('body').MPchart({chartType: 'line'});     // Create a line chart
+    chart.MPchart('setData', data);                                                 // Set the chart's data
+});
     </script>
   </body>
 </html>
